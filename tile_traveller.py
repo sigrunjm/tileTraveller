@@ -53,6 +53,30 @@ while not (x==3 and y==1):
             x += 1
         else:
             print("Not a valid direction!")
+    elif ((x == 2) and (y == 3)):
+        print("You can travel: (W)est or (E)ast")
+        get_direction = input("Direction: ")
+        if get_direction == ("W"):
+            x -= 1
+        elif get_direction == ("E"):
+            x += 1
+        else:
+            print("Not a valid direction!")
+    elif ((x == 3) and (y == 2)):
+        print("You can travel: (N)orth or (S)outh")
+        get_direction = input("Direction: ")
+        if get_direction == ("N"):
+            y += 1
+        elif get_direction == ("S"):
+            y -= 1
+        else:
+            print("Not a valid direction!")
+
+print('Victory!')
+
+
+
+
 
 
 
