@@ -6,25 +6,23 @@
 # The program asks the player wich direction in possible (N/n, S/s, W/w, E/e)
 # If the player enters a direction that is not possible the program outputs the message "Not a valid direction!"
 
-#possible moves
-
-N = "(N)orth"
-S = "(S)outh"
-W = "(W)est"
-E = "(E)ast"
-
 x = 1
 y = 1
+
+def get_direction():
+    get_direction = input("Direction: ")
+    get_direction = get_direction.lower()
+    return get_direction
 
 while not (x==3 and y==1):
     if ((x == 1) and (y == 1)) or ((x==2) and (y==1)):
         print("You can travel: (N)orth.")
         get_direction = input("Direction: ")
-        if get_direction == ("N"):
+        if get_direction == ("n"):
             y += 1
         else:
             print("Not a valid direction!")
-    elif ((x == 1) and (y==2)):
+    elif ((x == 1) and (y == 2)):
         print("You can travel: (N)orth or (E)ast or (S)outh")
         get_direction = input("Direction: ")
         if get_direction == ("N"):
