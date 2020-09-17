@@ -1,1 +1,1 @@
-print("hæ")
+print('Hellú')
