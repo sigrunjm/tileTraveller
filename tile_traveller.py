@@ -8,15 +8,55 @@
 
 #possible moves
 
-N = "(N)North"
-S = "(S)South"
-W = "(W)West"
-E = "(E)East"
+N = "(N)orth"
+S = "(S)outh"
+W = "(W)est"
+E = "(E)ast"
 
 x = 1
 y = 1
-player = x , y
-print(player)
+
+while not (x==3 and y==1):
+    if ((x == 1) and (y == 1)) or ((x==2) and (y==1)):
+        print("You can travel: (N)orth.")
+        get_direction = input("Direction: ")
+        if get_direction == ("N"):
+            y += 1
+        else:
+            print("Not a valid direction!")
+    elif ((x == 1) and (y==2)):
+        print("You can travel: (N)orth or (E)ast or (S)outh")
+        get_direction = input("Direction: ")
+        if get_direction == ("N"):
+            y += 1
+        elif get_direction == ("S"):
+            y -= 1
+        elif get_direction == ("E"):
+            x += 1
+        else: 
+            print("Not a valid direction!")
+    elif ((x == 2) and (y == 2)) or ((x == 3) and (y == 3)):
+        print("You can travel: (S)outh or (W)est")
+        get_direction = input("Direction: ")
+        if get_direction == ("S"):
+            y -= 1
+        elif get_direction == ("W"):
+            x -= 1
+        else:
+            print("Not a valid direction!")
+    elif ((x == 1) and (y == 3)):
+        print("You can travel: (S)outh or (E)ast")
+        get_direction = input("Direction: ")
+        if get_direction == ("S"):
+            y -= 1
+        elif get_direction == ("E"):
+            x += 1
+        else:
+            print("Not a valid direction!")
+
+
+
+
 
 
 
