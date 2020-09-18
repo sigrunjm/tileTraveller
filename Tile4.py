@@ -37,12 +37,12 @@ def movePlayer(pos,direction):
     elif direction == 'w':
         new_pos = pos
         return new_pos
-
-def isWinner(pos):
-    return pos == 3
+    else:
+        new_pos = pos
+        return new_pos
 
 pos = 1
-while not isWinner(pos):
+while pos != 3:
     if pos == 1:
         print('You can travel: (N)orth')
     if pos == 2:
