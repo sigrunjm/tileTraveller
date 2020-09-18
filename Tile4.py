@@ -4,7 +4,10 @@ ef þú mátt fara í þessa átt frá staðsetningunni sem þú ert á uppfæri
 annars verður new_pos óbreytt.
 Þá förum við í if lykkju í enda kóðans: Ef position breyttist ekkert mátti ekki fara í þessa átt og
 notandi er beðinn aftur um átt.
-
+Þannig flísarnar líta svona út:
+    7  8  9
+    4  5  6
+    1  2  3 
 Hverjir geta farið í hvaða átt?
 Norður : 1, 2, 3, 4, 6
 Suður : 4, 5, 6, 7, 9
@@ -44,25 +47,25 @@ def movePlayer(pos,direction):
 pos = 1
 while pos != 3:
     if pos == 1:
-        print('You can travel: (N)orth')
+        print('You can travel: (N)orth.')
     if pos == 2:
-        print('You can travel: (N)orth')
+        print('You can travel: (N)orth.')
     if pos == 4:
-        print('You can travel: (N)orth or (E)ast or (S)outh')
+        print('You can travel: (N)orth or (E)ast or (S)outh.')
     if pos == 5:
-        print('You can travel: (W)est or (S)outh')
+        print('You can travel: (S)outh or (W)est.')
     if pos == 6:
-        print('You can travel: (N)orth or (S)outh')
+        print('You can travel: (N)orth or (S)outh.')
     if pos == 7:
-        print('You can travel: (S)outh or (E)ast')
+        print('You can travel: (E)ast or (S)outh.')
     if pos == 8:
-        print('You can travel: (W)est or (E)ast')
+        print('You can travel: (E)ast or (W)est.')
     if pos == 9:
-        print('You can travel: (W)est or (S)outh')
+        print('You can travel: (S)outh or (W)est.')
 
-    direct = input('Direction: ')
-    direct = direct.lower()
-    new_position = movePlayer(pos,direct)
+    direct_input = input('Direction: ')
+    direct_input = direct_input.lower()
+    new_position = movePlayer(pos,direct_input)
     if new_position == pos:
         print("Not a valid direction!")
     else:
